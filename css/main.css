@@ -34,6 +34,10 @@ body{
     margin: 0 auto;
 }
 
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Quicksand';
+}
+
 h2{
     font-size: 26px;
     text-align: center;
@@ -135,9 +139,11 @@ h2{
 
 .slogan{
     width: 100%;
-    height: 60%;
+    height: 72%;
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
     background-image: url("../img/bg.jpg");
     background-size: cover;
     background-position: top;
@@ -147,6 +153,11 @@ h2{
     margin-left: 5%;
     font-family: 'Quicksand', sans-serif;
     color: var(--white);
+    text-align: center;
+}
+
+.some-front {
+    display: flex;
 }
 
 /***About me***/
@@ -171,10 +182,15 @@ h2{
 }
 
 /***Extra-curricular activity***/
+
+.title h2{
+    margin-top: 40px
+}
+
 #extra_curricular{
     max-width: 970px;
     margin: 0 auto;
-    padding: 20px 0 40px 0;
+    padding-bottom: 40px;
 }
 
 .extra_curricular_price{
@@ -358,7 +374,7 @@ h2{
 /***Join online***/
 .container-online{
     height: 300px;
-    background-image: url("../img/fbgroup.jpg");
+    background-image: url("../img/signup-pic.jpg");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -392,9 +408,9 @@ h2{
     background-color: var(--header-color);
 }
 
-.testimonials-container{
+/*.testimonials-container{
 
-}
+}*/
 
 .slick-slider{
     width: 85%;
@@ -555,6 +571,10 @@ input[type="submit"]:hover{
 input[type=checkbox] + label {
     display: block;
     cursor: pointer;
+}
+
+input[type=checkbox] + label>a {
+    color: var(--blue);
   }
   
   input[type=checkbox] {
@@ -563,7 +583,7 @@ input[type=checkbox] + label {
   
   input[type=checkbox] + label:before {
     content: "\2714";
-    background-color: #F8F8F8;
+    background-color: #fff;
     display: inline-block;
     width: 1em;
     height: 1em;
@@ -627,12 +647,21 @@ footer{
     width: 40px;
     height: 40px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-direction: row;
     background-color: var(--some-color);
     border-radius: 200px;
     margin: 10px;
+}
+
+.some span:hover{
+    background-color: var(--some-hover-color);
+}
+
+.some span>a{
+    color: #fff;
+    font-size: 22px;
 }
 
 .some span:first-child{
@@ -650,10 +679,12 @@ footer{
 .some p{
     grid-area: author;
     margin: 30px 0 15px 0;
+    text-align: center;
+    font-size: 14px;
 }
 
-.some span>i{
-    font-size: 22px;
+.some p>a{
+    color: #fff;
 }
 
 .some-and-logo > img{
@@ -716,12 +747,20 @@ footer{
         grid-template-areas: ". . icon1 icon2 icon3 . ."
         ". author author author author author .";
     }
+
+    .slogan{
+        height: 82.5%;
+    }
 }
   
 @media (min-width: 900px) {
     .important-info-container{
         font-size: 16px;
         width: 90%;
+    }
+
+    .slogan{
+        height: 82%;
     }
 
     .nav{
@@ -759,7 +798,7 @@ footer{
 
     .container-about-me h2{
         grid-area: 1 / 1 / 2 / 3;
-        margin: 20px 0 40px 0;
+        margin: 30px 0 40px 0;
     }
 
     .container-about-me img{
@@ -813,10 +852,26 @@ footer{
         align-items: center;
     }
 
+    .some-and-logo>img{
+        margin: 15px 0;
+    }
+
     .some{
         grid-template-columns: repeat(auto-fill, 14.28%);
-        grid-template-areas: ". . icon1 icon2 icon3 . ."
-        ". author author author author author .";
+        grid-template-areas: "icon1 icon2 icon3 . . . ."
+        "author author author author author.  .";
+    }
+
+    .some p{
+        text-align: left;
+    }
+
+    .rights{
+        flex: 1 1 auto;
+    }
+
+    .scrollup-btn{
+        flex: 0 1 auto;
     }
 }
   

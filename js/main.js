@@ -59,8 +59,8 @@ $(document).ready(function(){
 
 let _testimonials = [];
 
-async function getTestimonials(categoryId){
-    let data = await fetch(`http://matma.wojciechdzwonczyk.com/wordpress/wp-json/wp/v2/posts?_embed&categories=${categoryId}`).then(response => response.json());
+async function getTestimonials(){
+    let data = await fetch(`http://matma.wojciechdzwonczyk.com/wordpress/wp-json/wp/v2/posts?_embed&categories=3`).then(response => response.json());
 
     console.log(data);
     _testimonials = data;
@@ -71,7 +71,7 @@ async function getTestimonials(categoryId){
 
 getTestimonials();
 
-function appendTestimonials(categoryId){
+//function appendTestimonials(categoryId){
 
-}
+//}
         
