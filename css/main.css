@@ -49,6 +49,8 @@ h2{
 .first-header{
     height: 100vh;
     background-color: #fff;
+    display: flex;
+    flex-direction: column;
 }
 
 .important-info{
@@ -139,8 +141,8 @@ h2{
 
 .slogan{
     width: 100%;
-    height: 72%;
     display: flex;
+    flex: 1;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -744,12 +746,13 @@ footer{
 
     .some{
         grid-template-columns: repeat(auto-fill, 14.28%);
-        grid-template-areas: ". . icon1 icon2 icon3 . ."
-        ". author author author author author .";
+        grid-template-areas: "icon1 icon2 icon3 . . . ."
+        "author author author author author . .";
     }
 
-    .slogan{
-        height: 82.5%;
+    .some-front{
+        grid-template-columns: repeat(auto-fill, 12.5%);
+        grid-template-areas: "icon1 icon1 . icon2 icon2 . icon3 icon3";
     }
 }
   
@@ -757,10 +760,6 @@ footer{
     .important-info-container{
         font-size: 16px;
         width: 90%;
-    }
-
-    .slogan{
-        height: 82%;
     }
 
     .nav{
@@ -856,10 +855,9 @@ footer{
         margin: 15px 0;
     }
 
-    .some{
-        grid-template-columns: repeat(auto-fill, 14.28%);
-        grid-template-areas: "icon1 icon2 icon3 . . . ."
-        "author author author author author.  .";
+    .some-front{
+        grid-template-columns: repeat(auto-fill, 12.5%);
+        grid-template-areas: "icon1 icon1 . icon2 icon2 . icon3 icon3";
     }
 
     .some p{
