@@ -451,6 +451,7 @@ h2{
 
 .testimonials-message p{
     padding: 15px 0 10px 0;
+    line-break: anywhere;
 }
 
 .testimonials-user-name{
@@ -717,6 +718,56 @@ footer{
 .scrollup-btn:hover{
     background-color: var(--blue);
 }
+
+/***REGULATION PAGE***/
+#bg-regulation{
+    height: 45vh;
+    background-image: url("img/adult-cheerful-clipboard-1089549.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#regulation-title{
+    text-align: center;
+    color: #fff;
+    margin-top: 6%;
+}
+
+.point{
+    margin: 15px 0;
+    color: #3580AB;
+}
+
+.regulations-point{
+    margin: 20px;
+}
+
+#regulations{
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+/***404***/
+
+#error404{
+    margin-top: 10%; 
+ }
+ 
+ .error-info{
+     font-size: 10em;
+     font-family: 'Quicksand', sans-serif;
+     text-align: center;
+     color: #F76891;
+ }
+ 
+ .error-info1{
+     font-size: 1.05em;
+     text-align: center;
+ }
+ 
+ .error-info1 a{
+     color: #3580AB;
+ }
 
 
 @media (min-width: 600px) {
